@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px 30px;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  &__logo {
+    height: 68px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 100px;
+
+    a {
+      font-size: 24px;
+      font-weight: 500;
+
+      &.active {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use '../../styles/variables' as *;
+
+.cards-container {
+  background-color: $secondary-color;
+  border-radius: 25px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-bottom: 50px;
+}
