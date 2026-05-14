@@ -1,0 +1,9 @@
+@use '../../styles/variables' as *;
+
+.about {
+  &__collapses {
+    max-width: 1023px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+}
