@@ -1,0 +1,42 @@
+@use '../../styles/variables' as *;
+
+.collapse {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__header {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__arrow {
+    font-size: 32px;
+    line-height: 1;
+    display: inline-block;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    background-color: $secondary-color;
+    color: $dark-text;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+}
