@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 140px 20px;
+
+  &__title {
+    font-size: 288px;
+    font-weight: 700;
+    color: $primary-color;
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__message {
+    font-size: 36px;
+    font-weight: 500;
+    color: $primary-color;
+    margin: 40px 0 180px;
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    color: $dark-text;
+    text-decoration: underline;
+  }
+}
