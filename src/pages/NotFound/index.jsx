@@ -9,7 +9,7 @@ function NotFound() {
         Oops! The page you're looking for doesn't exist.
       </p>
       <Link to="/" className="not-found__link">
-        Return to homepage
+        Return to home page
       </Link>
     </div>
   )
