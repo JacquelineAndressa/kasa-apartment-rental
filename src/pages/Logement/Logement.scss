@@ -1,0 +1,90 @@
+@use '../../styles/variables' as *;
+
+.logement {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 500;
+    color: $primary-color;
+    margin: 0;
+  }
+
+  &__location {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  &__host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__host-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: $primary-color;
+    text-align: right;
+    max-width: 80px;
+  }
+
+  &__host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__collapses {
+    display: flex;
+    gap: 76px;
+    margin-top: 30px;
+  }
+
+  &__equipments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__collapses {
+    display: flex;
+    gap: 76px;
+    margin-top: 30px;
+
+    .collapse {
+      flex: 1;
+    }
+  }
+}
