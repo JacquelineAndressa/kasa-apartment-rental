@@ -1,4 +1,5 @@
 @use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
 
 .logement {
   &__header {
@@ -6,6 +7,12 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
   }
 
   &__info {
@@ -19,6 +26,10 @@
     font-weight: 500;
     color: $primary-color;
     margin: 0;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__location {
@@ -26,12 +37,21 @@
     font-weight: 500;
     color: #000000;
     margin: 0;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__tags {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+
+    @include mobile {
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
   }
 
   &__side {
@@ -39,6 +59,14 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 20px;
+
+    @include mobile {
+      flex-direction: row-reverse;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      gap: 0;
+    }
   }
 
   &__host {
@@ -53,6 +81,10 @@
     color: $primary-color;
     text-align: right;
     max-width: 80px;
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   &__host-picture {
@@ -60,21 +92,10 @@
     height: 64px;
     border-radius: 50%;
     object-fit: cover;
-  }
 
-  &__collapses {
-    display: flex;
-    gap: 76px;
-    margin-top: 30px;
-  }
-
-  &__equipments-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      margin-bottom: 5px;
+    @include mobile {
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -85,6 +106,22 @@
 
     .collapse {
       flex: 1;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 1px;
+      margin-top: 20px;
+    }
+  }
+
+  &__equipments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
     }
   }
 }

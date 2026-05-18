@@ -1,4 +1,5 @@
 @use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
 
 .header {
   display: flex;
@@ -7,18 +8,35 @@
   padding: 50px 20px 30px;
   max-width: 1240px;
   margin: 0 auto;
+  width: 100%;
+
+  @include mobile {
+    padding: 20px 20px 0;
+  }
 
   &__logo {
     height: 68px;
+
+    @include mobile {
+      height: 47px;
+    }
   }
 
   &__nav {
     display: flex;
     gap: 100px;
 
+    @include mobile {
+      gap: 20px;
+    }
+
     a {
       font-size: 24px;
       font-weight: 500;
+
+      @include mobile {
+        font-size: 12px;
+      }
 
       &.active {
         text-decoration: underline;

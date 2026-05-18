@@ -1,4 +1,5 @@
 @use '../../styles/variables' as *;
+@use '../../styles/breakpoints' as *;
 
 .banner {
   position: relative;
@@ -7,6 +8,12 @@
   margin: 30px 0;
   border-radius: 25px;
   overflow: hidden;
+
+  @include mobile {
+    height: 111px;
+    border-radius: 10px;
+    margin: 16px 0;
+  }
 
   img {
     width: 100%;
@@ -25,5 +32,14 @@
     font-weight: 500;
     text-align: center;
     width: 90%;
+
+    @include mobile {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: left;
+      left: 16px;
+      width: calc(100% - 32px);
+      transform: translateY(-50%);
+    }
   }
 }
