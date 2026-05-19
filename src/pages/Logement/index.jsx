@@ -1,6 +1,5 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import logements from '../../data/logements.json'
-import NotFound from '../NotFound'
 import Slideshow from '../../components/Slideshow'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
@@ -12,7 +11,7 @@ function Logement() {
   const logement = logements.find((item) => item.id === id)
 
   if (!logement) {
-    return <NotFound />
+    return <Navigate to="/404" replace />
   }
 
   return (
