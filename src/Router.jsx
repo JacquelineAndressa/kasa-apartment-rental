@@ -4,10 +4,12 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Logement from './pages/Logement'
 import NotFound from './pages/NotFound'
+import ScrollToTop from './components/ScrollToTop'
 
 function Router() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
